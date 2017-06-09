@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using System.Linq;
+using NUnit.Framework;
+using SimpleBind.Examples.Model.UITest;
 using Xamarin.UITest;
 using Xamarin.UITest.Android;
 
@@ -22,10 +24,17 @@ namespace SimpleBind.Droid.UITest
         }
 
         [Test]
-        public void AppLaunches()
+        public void EditTextHandler_TextChanged()
         {
-            //_app.Screenshot("First screen.");
-            Assert.AreEqual(1, 1);
+            const string editTextId = "editTextChanged";
+            const string textViewId = "editTextChanged_TextView";
+
+            _app.ClearText(editTextId);
+            Assert.IsTrue(_app.Query(c => c.Marked(editTextId).Text("")).Any());
+
+            _app.EnterText(editTextId, "Unit Test UI Edit Changed!");
+            Assert.IsTrue(_app.Query(c => c.Marked(editTextId).Text("Unit Test UI Edit Changed!")).Any());
+            Assert.IsTrue(_app.Query(c => c.Marked(textViewId).Text(TestModelConsts.EditTextTextChangedPrefix + "Unit Test UI Edit Changed!")).Any());
         }
     }
 }

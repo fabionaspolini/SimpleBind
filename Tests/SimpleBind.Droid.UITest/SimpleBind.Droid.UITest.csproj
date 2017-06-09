@@ -63,5 +63,11 @@
   <ItemGroup>
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Examples\SimpleBind.Examples\SimpleBind.Examples.csproj">
+      <Project>{1c8ec461-0974-4f0e-b06c-fc6cc7e23658}</Project>
+      <Name>SimpleBind.Examples</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
