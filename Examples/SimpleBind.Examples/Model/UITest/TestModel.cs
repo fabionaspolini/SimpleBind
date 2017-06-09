@@ -8,8 +8,8 @@ namespace SimpleBind.Examples.Model.UITest
     {
         private string _editText_TextChanged = "Valor Inicial";
         private bool _checkBox_CheckedChange = true;
-        private string _spinner_Weekdays = "Monday";
-        private int _spinner_Weekdays_Position = 1;
+        private string _spinner_SelectedItem = "Saturday";
+        private int _spinner_SelectedItemPosition = 2;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -33,22 +33,22 @@ namespace SimpleBind.Examples.Model.UITest
             }
         }
 
-        public string Spinner_Weekdays
+        public string Spinner_SelectedItem
         {
-            get => _spinner_Weekdays;
+            get => _spinner_SelectedItem;
             set
             {
-                _spinner_Weekdays = value;
+                _spinner_SelectedItem = value;
                 OnPropertyChanged();
             }
         }
 
-        public int Spinner_Weekdays_Position
+        public int Spinner_SelectedItemPosition
         {
-            get => _spinner_Weekdays_Position;
+            get => _spinner_SelectedItemPosition;
             set
             {
-                _spinner_Weekdays_Position = value;
+                _spinner_SelectedItemPosition = value;
                 OnPropertyChanged();
             }
         }

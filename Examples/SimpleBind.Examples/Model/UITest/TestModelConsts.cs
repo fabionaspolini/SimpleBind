@@ -5,8 +5,8 @@
         // ReSharper disable InconsistentNaming
         public const string EditText_TextChanged_Prefix = "EditText.TextChanged: ";
         public const string CheckBox_CheckedChange_Prefix = "CheckBox.CheckedChange: ";
-        public const string Spinner_Weekdays_Prefix = "Spinner.Weekdays.SelectedItem: ";
-        public const string Spinner_Weekdays_SelectedItemPosition_Prefix = "Spinner.Weekdays.SelectedItemPosition: ";
+        public const string Spinner_SelectedItem_Prefix = "Spinner.SelectedItem: ";
+        public const string Spinner_SelectedItemPosition_Prefix = "Spinner.SelectedItemPosition: ";
         // ReSharper restore InconsistentNaming
     }
 }

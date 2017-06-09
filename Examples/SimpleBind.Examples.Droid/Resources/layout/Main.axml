@@ -9,13 +9,14 @@
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
+    <!-- EditText.Text -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
       <TextView
           android:id="@+id/editText_TextChanged_TextViewInfo"
-          android:text="EditText.TextChanged: "
+          android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
       <EditText
@@ -23,6 +24,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
     </LinearLayout>
+    <!-- CheckBox.Checked -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -30,7 +32,7 @@
         android:layout_marginTop="50px">
       <TextView
           android:id="@+id/checkBox_CheckedChange_TextViewInfo"
-          android:text="CheckBox.CheckedChange: "
+          android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
       <CheckBox
@@ -39,25 +41,36 @@
           android:layout_height="wrap_content"
           android:text="CheckBox.CheckedChange Test" />
     </LinearLayout>
-
-    <!-- Spinner - Weekdays -->
+    <!-- Spinner.SelectedItem -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50px">
       <TextView
-          android:id="@+id/spinner_ItemSelected_TextViewInfo"
-          android:text="Spinner.ItemSelected: "
+          android:id="@+id/spinner_SelectedItem_TextViewInfo"
+          android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
-      <TextView
-        android:id="@+id/spinner_Weekdays_SelectedItemPosition_TextViewInfo"
-        android:text="Spinner.ItemSelected: "
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
       <Spinner
-          android:id="@+id/spinner_ItemSelected"
+          android:id="@+id/spinner_SelectedItem"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:entries="@array/weekdays" />
+    </LinearLayout>
+    <!-- Spinner.SelectedItemPosition -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50px">
+      <TextView
+          android:id="@+id/spinner_SelectedItemPosition_TextViewInfo"
+          android:text="xxxxx"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+      <Spinner
+          android:id="@+id/spinner_SelectedItemPosition"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:entries="@array/weekdays" />

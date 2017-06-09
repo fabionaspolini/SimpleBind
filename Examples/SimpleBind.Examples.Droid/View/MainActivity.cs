@@ -65,29 +65,29 @@ namespace SimpleBind.Examples.Droid.View
                     .SourceToDestWay();
 
                 // Spinner.SelectedItem
-                _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
-                    .From(m => m.Spinner_Weekdays)
+                _container.CreateBind(_spinner_SelectedItem.CreateBindProxy())
+                    .From(m => m.Spinner_SelectedItem)
                     .To(v => v.SelectedItem)
                     .TwoWay();
 
-                _container.CreateBind(_spinner_ItemSelected_TextViewInfo)
-                    .From(m => m.Spinner_Weekdays)
+                _container.CreateBind(_spinner_SelectedItem_TextViewInfo)
+                    .From(m => m.Spinner_SelectedItem)
                     .To(v => v.Text,
                         config => config.SetterDataConverter<string>(
-                            (model, view, value) => TestModelConsts.Spinner_Weekdays_Prefix + value))
+                            (model, view, value) => TestModelConsts.Spinner_SelectedItem_Prefix + value))
                     .SourceToDestWay();
 
                 // Spinner.SelectedItemPosition
-                _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
-                    .From(m => m.Spinner_Weekdays_Position)
+                _container.CreateBind(_spinner_SelectedItemPosition.CreateBindProxy())
+                    .From(m => m.Spinner_SelectedItemPosition)
                     .To(v => v.SelectedItemPosition)
                     .TwoWay();
 
-                _container.CreateBind(_spinner_Weekdays_SelectedItemPosition_TextViewInfo)
-                    .From(m => m.Spinner_Weekdays_Position)
+                _container.CreateBind(_spinner_SelectedItemPosition_TextViewInfo)
+                    .From(m => m.Spinner_SelectedItemPosition)
                     .To(v => v.Text,
                         config => config.SetterDataConverter<int>(
-                            (model, view, value) => TestModelConsts.Spinner_Weekdays_SelectedItemPosition_Prefix + value))
+                            (model, view, value) => TestModelConsts.Spinner_SelectedItemPosition_Prefix + value))
                     .SourceToDestWay();
 
                 //

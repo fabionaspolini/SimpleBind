@@ -88,14 +88,17 @@ namespace SimpleBind.Examples.Droid
 			// aapt resource value: 0x7f060000
 			public const int editText_TextChanged_TextViewInfo = 2131099648;
 			
+			// aapt resource value: 0x7f060005
+			public const int spinner_SelectedItem = 2131099653;
+			
+			// aapt resource value: 0x7f060007
+			public const int spinner_SelectedItemPosition = 2131099655;
+			
 			// aapt resource value: 0x7f060006
-			public const int spinner_ItemSelected = 2131099654;
+			public const int spinner_SelectedItemPosition_TextViewInfo = 2131099654;
 			
 			// aapt resource value: 0x7f060004
-			public const int spinner_ItemSelected_TextViewInfo = 2131099652;
-			
-			// aapt resource value: 0x7f060005
-			public const int spinner_Weekdays_SelectedItemPosition_TextViewInfo = 2131099653;
+			public const int spinner_SelectedItem_TextViewInfo = 2131099652;
 			
 			static Id()
 			{
