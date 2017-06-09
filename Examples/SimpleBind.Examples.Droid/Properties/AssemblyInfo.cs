@@ -33,8 +33,9 @@ using Android.App;
 [assembly: UsesPermission(Android.Manifest.Permission.Internet)]
 
 [assembly: Application(
-    //Theme = "@android:style/Theme.Material.Light",
+    Theme = "@android:style/Theme.Material.Light",
     Label = "Simple Bind Android Example Test",
+    Icon = "@drawable/icon",
 #if DEBUG
     Debuggable = true
 #else

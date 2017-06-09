@@ -13,15 +13,15 @@ namespace SimpleBind.Droid.BindHandler
 
         public override void Apply()
         {
-            Item.CheckedChange += CheckedChangedEvent;
+            Item.CheckedChange += CheckedChangeEvent;
         }
 
         public override void Remove()
         {
-            Item.CheckedChange -= CheckedChangedEvent;
+            Item.CheckedChange -= CheckedChangeEvent;
         }
 
-        private void CheckedChangedEvent(object sender, CompoundButton.CheckedChangeEventArgs args)
+        private void CheckedChangeEvent(object sender, CompoundButton.CheckedChangeEventArgs args)
         {
             BroadcastValueChanged(
                 sender,

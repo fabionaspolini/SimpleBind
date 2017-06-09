@@ -8,11 +8,17 @@ namespace SimpleBind.Examples.Droid.View
         #region Componentes
 #pragma warning disable 649
 
-        [ComponentMap(Resource.Id.editTextChanged_TextView)]
-        private TextView _editTextChanged_TextView;
+        [ComponentMap(Resource.Id.editText_TextChanged_TextViewInfo)]
+        private TextView _editText_TextChanged_TextView;
 
-        [ComponentMap(Resource.Id.editTextChanged)]
-        private EditText _editTextChanged;
+        [ComponentMap(Resource.Id.editText_TextChanged)]
+        private EditText _editText_TextChanged;
+
+        [ComponentMap(Resource.Id.checkBox_CheckedChange_TextViewInfo)]
+        private TextView _checkBox_CheckedChange_TextView;
+
+        [ComponentMap(Resource.Id.checkBox_CheckedChange)]
+        private CheckBox _checkBox_CheckedChange;
 
 #pragma warning restore 649
         #endregion

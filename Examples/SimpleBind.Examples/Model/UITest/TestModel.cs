@@ -5,7 +5,8 @@ namespace SimpleBind.Examples.Model.UITest
 {
     public class TestModel : INotifyPropertyChanged
     {
-        private static string _editTextChanged = "Valor Inicial";
+        private string _editTextChanged = "Valor Inicial";
+        private bool _checkBoxCheckedChange = false;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -19,9 +20,23 @@ namespace SimpleBind.Examples.Model.UITest
             }
         }
 
+        public bool CheckBox_CheckedChange
+        {
+            get => _checkBoxCheckedChange;
+            set
+            {
+                _checkBoxCheckedChange = value;
+                OnPropertyChanged();
+            }
+        }
+
+        #region Métodos
+
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
+        #endregion
     }
 }

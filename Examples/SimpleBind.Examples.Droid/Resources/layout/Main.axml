@@ -3,20 +3,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:minWidth="25px"
-    android:minHeight="25px">
+    android:minHeight="25px"
+    android:padding="20px">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/linearLayout1">
-        <TextView
-            android:id="@+id/editTextChanged_TextView"
-            android:text="EditText.TextChanged: "
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-        <EditText
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/editText_TextChanged_TextViewInfo"
+                android:text="EditText.TextChanged: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/editText_TextChanged"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/editTextChanged" />
+            android:layout_height="match_parent"
+            android:layout_marginTop="50px">
+            <TextView
+                android:id="@+id/checkBox_CheckedChange_TextViewInfo"
+                android:text="CheckBox.CheckedChange: "
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <CheckBox
+                android:id="@+id/checkBox_CheckedChange"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CheckBox.CheckedChange Test" />
+        </LinearLayout>
     </LinearLayout>
 </ScrollView>
