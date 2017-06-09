@@ -8,6 +8,8 @@ namespace SimpleBind.Examples.Model.UITest
     {
         private string _editText_TextChanged = "Valor Inicial";
         private bool _checkBox_CheckedChange = true;
+        private string _spinner_Weekdays = "Monday";
+        private int _spinner_Weekdays_Position;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -27,6 +29,26 @@ namespace SimpleBind.Examples.Model.UITest
             set
             {
                 _checkBox_CheckedChange = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public string Spinner_Weekdays
+        {
+            get => _spinner_Weekdays;
+            set
+            {
+                _spinner_Weekdays = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public int Spinner_Weekdays_Position
+        {
+            get => _spinner_Weekdays_Position;
+            set
+            {
+                _spinner_Weekdays_Position = value;
                 OnPropertyChanged();
             }
         }

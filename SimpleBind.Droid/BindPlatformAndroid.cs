@@ -5,6 +5,7 @@ using SimpleBind.Droid.BindHandler;
 using SimpleBind.Droid.Proxy;
 using System;
 using System.Linq;
+using Java.Lang;
 
 namespace SimpleBind.Droid
 {
@@ -46,6 +47,7 @@ namespace SimpleBind.Droid
             //converters.Register<int, Java.Lang.Object>(Java.Lang.Integer.ValueOf);
             converters.Register<long, Java.Lang.Long>(Java.Lang.Long.ValueOf);
             converters.Register<short, Java.Lang.Short>(Java.Lang.Short.ValueOf);
+            converters.Register<string, Java.Lang.String>(v => new Java.Lang.String(v));
             // Decimal
             // converters.Register<DateTime, Java.Util.Date>(Java.Util.Date.ValueOf);
 
@@ -58,6 +60,7 @@ namespace SimpleBind.Droid
             converters.Register<Java.Lang.Integer, int>(v => v.IntValue());
             converters.Register<Java.Lang.Long, long>(v => v.LongValue());
             converters.Register<Java.Lang.Short, short>(v => v.ShortValue());
+            converters.Register<Java.Lang.String, string>(v => v.ToString());
         }
 
         protected override void RegisterDefaultHandlersConfig(BindHandlerConfigs handlers)

@@ -34,7 +34,7 @@ namespace SimpleBind.Droid.BindHandler
             var lValue = lValueJava.GetInstance();
             BroadcastValueChanged(
                 Item,
-                s => ((SpinnerProxyBind)s).SelectedItem,
+                s => ((SpinnerProxyBind) s).SelectedItem,
                 lValue ?? lValueJava);
 
             /*BroadcastValueChanged(

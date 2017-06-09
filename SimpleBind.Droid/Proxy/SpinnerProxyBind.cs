@@ -7,6 +7,8 @@ namespace SimpleBind.Droid.Proxy
 {
     public class SpinnerProxyBind
     {
+        #region Properties
+
         public ISpinnerAdapter Adapter => Spinner.Adapter;
 
         public Spinner Spinner { get; }
@@ -30,6 +32,8 @@ namespace SimpleBind.Droid.Proxy
             get { return Spinner.SelectedItemPosition; }
             set { Spinner.SetSelection(value, Animated); }
         }
+
+        #endregion
 
         public event EventHandler<AdapterView.ItemSelectedEventArgs> ItemSelected;
 

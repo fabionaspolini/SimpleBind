@@ -2,6 +2,7 @@
 using System.Windows.Input;
 using Android.App;
 using Android.Widget;
+using SimpleBind.Droid.Proxy;
 
 namespace SimpleBind.Droid.Hack
 {
@@ -15,6 +16,16 @@ namespace SimpleBind.Droid.Hack
         public void Include(CheckBox checkBox)
         {
             checkBox.CheckedChange += (sender, args) => checkBox.Checked = !checkBox.Checked;
+        }
+
+        public void Include(SpinnerProxyBind spinner)
+        {
+            spinner.ItemSelected += (sender, args) =>
+            {
+                spinner.Animated = !spinner.Animated;
+                spinner.SelectedItem = spinner.SelectedItem ?? new object();
+                spinner.SelectedItemPosition = spinner.SelectedItemPosition + 1;
+            };
         }
 
         public void Include(Switch @switch)

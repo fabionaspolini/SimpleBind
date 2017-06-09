@@ -20,7 +20,15 @@ namespace SimpleBind.Examples.Droid.View
         [ComponentMap(Resource.Id.checkBox_CheckedChange)]
         private CheckBox _checkBox_CheckedChange;
 
+        // Spinner - Weekdays
+        [ComponentMap(Resource.Id.spinner_ItemSelected_TextViewInfo)]
+        private TextView _spinner_ItemSelected_TextViewInfo;
+
+        [ComponentMap(Resource.Id.spinner_ItemSelected)]
+        private Spinner _spinner_ItemSelected;
+
 #pragma warning restore 649
+
         #endregion
     }
 }

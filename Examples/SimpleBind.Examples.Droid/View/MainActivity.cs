@@ -5,6 +5,7 @@ using SimpleBind.Droid;
 using SimpleBind.Droid.ComponentMap;
 using SimpleBind.Examples.Model.UITest;
 using System;
+using SimpleBind.Droid.Proxy;
 
 namespace SimpleBind.Examples.Droid.View
 {
@@ -61,6 +62,19 @@ namespace SimpleBind.Examples.Droid.View
                     .To(v => v.Text,
                         config => config.SetterDataConverter<bool>(
                             (model, view, value) => TestModelConsts.CheckBox_CheckedChange_Prefix + value))
+                    .SourceToDestWay();
+
+                // Spinner - Weekdays
+                _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
+                    .From(m => m.Spinner_Weekdays)
+                    .To(v => v.SelectedItem)
+                    .TwoWay();
+
+                _container.CreateBind(_spinner_ItemSelected_TextViewInfo)
+                    .From(m => m.Spinner_Weekdays)
+                    .To(v => v.Text,
+                        config => config.SetterDataConverter<string>(
+                            (model, view, value) => TestModelConsts.Spinner_Weekdays_Prefix + value))
                     .SourceToDestWay();
 
                 //
