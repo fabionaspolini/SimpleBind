@@ -51,6 +51,11 @@
           android:text="Spinner.ItemSelected: "
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
+      <TextView
+        android:id="@+id/spinner_Weekdays_SelectedItemPosition_TextViewInfo"
+        android:text="Spinner.ItemSelected: "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
       <Spinner
           android:id="@+id/spinner_ItemSelected"
           android:layout_width="match_parent"
