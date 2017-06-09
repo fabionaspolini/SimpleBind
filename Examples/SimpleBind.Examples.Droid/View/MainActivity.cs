@@ -39,25 +39,25 @@ namespace SimpleBind.Examples.Droid.View
 
             try
             {
-                // EditText -> TextChanged
-                _container.CreateBind(_editText_TextChanged)
+                // EditText.Text
+                _container.CreateBind(_editText_Text)
                     .From(m => m.EditText_TextChanged)
                     .To(v => v.Text)
                     .TwoWay();
 
-                _container.CreateBind(_editText_TextChanged_TextView)
+                _container.CreateBind(_editText_Text_TextView)
                     .From(m => m.EditText_TextChanged)
                     .To(v => v.Text,
                         config => config.SetterDataConverter<string>((model, view, value) => TestModelConsts.EditText_TextChanged_Prefix + value))
                     .SourceToDestWay();
 
-                // CheckBox -> CheckedChange
-                _container.CreateBind(_checkBox_CheckedChange)
+                // CheckBox.Checked
+                _container.CreateBind(_checkBox_Checked)
                     .From(m => m.CheckBox_CheckedChange)
                     .To(v => v.Checked)
                     .TwoWay();
 
-                _container.CreateBind(_checkBox_CheckedChange_TextView)
+                _container.CreateBind(_checkBox_Checked_TextView)
                     .From(m => m.CheckBox_CheckedChange)
                     .To(v => v.Text,
                         config => config.SetterDataConverter<bool>(

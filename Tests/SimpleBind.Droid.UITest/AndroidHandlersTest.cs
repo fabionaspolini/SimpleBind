@@ -27,8 +27,8 @@ namespace SimpleBind.Droid.UITest
         [Test]
         public void EditTextHandler_TextChanged()
         {
-            const string editTextId = "editText_TextChanged";
-            const string textViewId = "editText_TextChanged_TextViewInfo";
+            const string editTextId = "editText_Text";
+            const string textViewId = "editText_Text_TextViewInfo";
 
             // Valor inicial
             Assert.IsTrue(_app.Query(c => c
@@ -65,8 +65,8 @@ namespace SimpleBind.Droid.UITest
         [Test]
         public void CheckBoxHandler_CheckedChange()
         {
-            const string checkBoxId = "checkBox_CheckedChange";
-            const string textViewId = "checkBox_CheckedChange_TextViewInfo";
+            const string checkBoxId = "checkBox_Checked";
+            const string textViewId = "checkBox_Checked_TextViewInfo";
 
             // Valor inicial
             Assert.IsTrue(_app.Query(c => c

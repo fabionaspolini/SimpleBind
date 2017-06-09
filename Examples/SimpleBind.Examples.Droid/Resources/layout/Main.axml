@@ -15,12 +15,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
       <TextView
-          android:id="@+id/editText_TextChanged_TextViewInfo"
+          android:id="@+id/editText_Text_TextViewInfo"
           android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
       <EditText
-          android:id="@+id/editText_TextChanged"
+          android:id="@+id/editText_Text"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
     </LinearLayout>
@@ -31,12 +31,12 @@
         android:layout_height="match_parent"
         android:layout_marginTop="50px">
       <TextView
-          android:id="@+id/checkBox_CheckedChange_TextViewInfo"
+          android:id="@+id/checkBox_Checked_TextViewInfo"
           android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
       <CheckBox
-          android:id="@+id/checkBox_CheckedChange"
+          android:id="@+id/checkBox_Checked"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:text="CheckBox.CheckedChange Test" />

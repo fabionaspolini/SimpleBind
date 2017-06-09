@@ -77,16 +77,16 @@ namespace SimpleBind.Examples.Droid
 		{
 			
 			// aapt resource value: 0x7f060003
-			public const int checkBox_CheckedChange = 2131099651;
+			public const int checkBox_Checked = 2131099651;
 			
 			// aapt resource value: 0x7f060002
-			public const int checkBox_CheckedChange_TextViewInfo = 2131099650;
+			public const int checkBox_Checked_TextViewInfo = 2131099650;
 			
 			// aapt resource value: 0x7f060001
-			public const int editText_TextChanged = 2131099649;
+			public const int editText_Text = 2131099649;
 			
 			// aapt resource value: 0x7f060000
-			public const int editText_TextChanged_TextViewInfo = 2131099648;
+			public const int editText_Text_TextViewInfo = 2131099648;
 			
 			// aapt resource value: 0x7f060005
 			public const int spinner_SelectedItem = 2131099653;
