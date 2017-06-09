@@ -64,15 +64,10 @@ namespace SimpleBind.Examples.Droid.View
                             (model, view, value) => TestModelConsts.CheckBox_CheckedChange_Prefix + value))
                     .SourceToDestWay();
 
-                // Spinner - Weekdays
+                // Spinner.SelectedItem
                 _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
                     .From(m => m.Spinner_Weekdays)
                     .To(v => v.SelectedItem)
-                    .TwoWay();
-
-                _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
-                    .From(m => m.Spinner_Weekdays_Position)
-                    .To(v => v.SelectedItemPosition)
                     .TwoWay();
 
                 _container.CreateBind(_spinner_ItemSelected_TextViewInfo)
@@ -81,6 +76,12 @@ namespace SimpleBind.Examples.Droid.View
                         config => config.SetterDataConverter<string>(
                             (model, view, value) => TestModelConsts.Spinner_Weekdays_Prefix + value))
                     .SourceToDestWay();
+
+                // Spinner.SelectedItemPosition
+                _container.CreateBind(_spinner_ItemSelected.CreateBindProxy())
+                    .From(m => m.Spinner_Weekdays_Position)
+                    .To(v => v.SelectedItemPosition)
+                    .TwoWay();
 
                 _container.CreateBind(_spinner_Weekdays_SelectedItemPosition_TextViewInfo)
                     .From(m => m.Spinner_Weekdays_Position)
