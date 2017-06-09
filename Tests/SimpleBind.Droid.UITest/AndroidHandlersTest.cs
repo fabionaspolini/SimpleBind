@@ -1,6 +1,6 @@
-﻿using System.Linq;
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using SimpleBind.Examples.Model.UITest;
+using System.Linq;
 using Xamarin.UITest;
 using Xamarin.UITest.Android;
 
@@ -17,7 +17,7 @@ namespace SimpleBind.Droid.UITest
             _platform = platform;
         }
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void BeforeEachTest()
         {
             _app = AppInitializer.StartApp(_platform);
@@ -26,13 +26,21 @@ namespace SimpleBind.Droid.UITest
         [Test]
         public void EditTextHandler_TextChanged()
         {
-            const string editTextId = "editTextChanged";
-            const string textViewId = "editTextChanged_TextViewInfo";
+            const string editTextId = "editText_TextChanged";
+            const string textViewId = "editText_TextChanged_TextViewInfo";
 
+            //
             _app.ClearText(editTextId);
+
             Assert.IsTrue(_app.Query(c => c.Marked(editTextId).Text("")).Any());
 
+            Assert.IsTrue(_app.Query(c => c
+                .Marked(textViewId)
+                .Text(TestModelConsts.EditText_TextChanged_Prefix)).Any());
+
+            //
             _app.EnterText(editTextId, "Unit Test UI Edit Changed!");
+
             Assert.IsTrue(_app.Query(c => c
                 .Marked(editTextId)
                 .Text("Unit Test UI Edit Changed!")).Any());
@@ -45,8 +53,34 @@ namespace SimpleBind.Droid.UITest
         [Test]
         public void CheckBoxHandler_CheckedChange()
         {
-            const string checkBoxId = "checkBoxCheckedChange";
-            const string textViewId = "checkBoxCheckedChange_TextViewInfo";
+            const string checkBoxId = "checkBox_CheckedChange";
+            const string textViewId = "checkBox_CheckedChange_TextViewInfo";
+
+            //
+            _app.Tap(checkBoxId);
+
+            Assert.IsFalse(_app.Query(c => c
+                .Marked(checkBoxId)
+                .Invoke("isChecked")
+                .Value<bool>())
+                .First());
+
+            Assert.IsTrue(_app.Query(c => c
+                .Marked(textViewId)
+                .Text(TestModelConsts.CheckBox_CheckedChange_Prefix + false)).Any());
+
+            //
+            _app.Tap(checkBoxId);
+
+            Assert.IsTrue(_app.Query(c => c
+                    .Marked(checkBoxId)
+                    .Invoke("isChecked")
+                    .Value<bool>())
+                .First());
+
+            Assert.IsTrue(_app.Query(c => c
+                .Marked(textViewId)
+                .Text(TestModelConsts.CheckBox_CheckedChange_Prefix + true)).Any());
         }
     }
 }

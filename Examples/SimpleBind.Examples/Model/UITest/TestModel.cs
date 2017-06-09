@@ -1,31 +1,32 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+// ReSharper disable InconsistentNaming
 
 namespace SimpleBind.Examples.Model.UITest
 {
     public class TestModel : INotifyPropertyChanged
     {
-        private string _editTextChanged = "Valor Inicial";
-        private bool _checkBoxCheckedChange = false;
+        private string _editText_TextChanged = "Valor Inicial";
+        private bool _checkBox_CheckedChange = true;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public string EditTextChanged
+        public string EditText_TextChanged
         {
-            get => _editTextChanged;
+            get => _editText_TextChanged;
             set
             {
-                _editTextChanged = value;
+                _editText_TextChanged = value;
                 OnPropertyChanged();
             }
         }
 
         public bool CheckBox_CheckedChange
         {
-            get => _checkBoxCheckedChange;
+            get => _checkBox_CheckedChange;
             set
             {
-                _checkBoxCheckedChange = value;
+                _checkBox_CheckedChange = value;
                 OnPropertyChanged();
             }
         }
