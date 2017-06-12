@@ -10,6 +10,9 @@ namespace SimpleBind.Examples.Droid.View
 
         // _tipoComponent_Propriedade_InfoAdicional
 
+        [ComponentMap(Resource.Id.testeButton)]
+        private Button _testeButton;
+
         [ComponentMap(Resource.Id.editText_Text_TextViewInfo)]
         private TextView _editText_Text_TextView;
 
@@ -22,19 +25,26 @@ namespace SimpleBind.Examples.Droid.View
         [ComponentMap(Resource.Id.checkBox_Checked)]
         private CheckBox _checkBox_Checked;
 
-        // Spinner.SelectedItem
-        [ComponentMap(Resource.Id.spinner_SelectedItem_TextViewInfo)]
-        private TextView _spinner_SelectedItem_TextViewInfo;
-
-        [ComponentMap(Resource.Id.spinner_SelectedItem)]
-        private Spinner _spinner_SelectedItem;
-
         // Spinner.SelectedItemPosition
         [ComponentMap(Resource.Id.spinner_SelectedItemPosition_TextViewInfo)]
         private TextView _spinner_SelectedItemPosition_TextViewInfo;
 
         [ComponentMap(Resource.Id.spinner_SelectedItemPosition)]
         private Spinner _spinner_SelectedItemPosition;
+
+        // Spinner.SelectedItem.JavaString
+        [ComponentMap(Resource.Id.spinner_SelectedItem_JavaString_TextViewInfo)]
+        private TextView _spinner_SelectedItem_JavaString_TextViewInfo;
+
+        [ComponentMap(Resource.Id.spinner_SelectedItem_JavaString)]
+        private Spinner _spinner_SelectedItem_JavaString;
+
+        // Spinner.SelectedItem.String
+        [ComponentMap(Resource.Id.spinner_SelectedItem_String_TextViewInfo)]
+        private TextView _spinner_SelectedItem_String_TextViewInfo;
+
+        [ComponentMap(Resource.Id.spinner_SelectedItem_String)]
+        private Spinner _spinner_SelectedItem_String;
 
 #pragma warning restore 649
 

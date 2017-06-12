@@ -9,6 +9,23 @@
       android:orientation="vertical"
       android:layout_width="match_parent"
       android:layout_height="match_parent">
+
+    <!-- Teste -->
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+      <TextView
+        android:text="Teste"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+      <Button
+        android:id="@+id/testeButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Teste" />
+    </LinearLayout>
+
     <!-- EditText.Text -->
     <LinearLayout
         android:orientation="vertical"
@@ -24,6 +41,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
     </LinearLayout>
+
     <!-- CheckBox.Checked -->
     <LinearLayout
         android:orientation="vertical"
@@ -41,39 +59,58 @@
           android:layout_height="wrap_content"
           android:text="CheckBox.CheckedChange Test" />
     </LinearLayout>
-    <!-- Spinner.SelectedItem -->
+
+    <!-- Spinner.SelectedItemPosition -->
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="50px">
+      <TextView
+        android:id="@+id/spinner_SelectedItemPosition_TextViewInfo"
+        android:text="xxxxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+      <Spinner
+        android:id="@+id/spinner_SelectedItemPosition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/weekdays" />
+    </LinearLayout>
+
+    <!-- Spinner.SelectedItem.JavaString -->
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="50px">
       <TextView
-          android:id="@+id/spinner_SelectedItem_TextViewInfo"
+          android:id="@+id/spinner_SelectedItem_JavaString_TextViewInfo"
           android:text="xxxxx"
           android:layout_width="match_parent"
           android:layout_height="wrap_content" />
       <Spinner
-          android:id="@+id/spinner_SelectedItem"
+          android:id="@+id/spinner_SelectedItem_JavaString"
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
           android:entries="@array/weekdays" />
     </LinearLayout>
-    <!-- Spinner.SelectedItemPosition -->
+
+    <!-- Spinner.SelectedItem.String -->
     <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50px">
+      android:orientation="vertical"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_marginTop="50px">
       <TextView
-          android:id="@+id/spinner_SelectedItemPosition_TextViewInfo"
-          android:text="xxxxx"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content" />
+        android:id="@+id/spinner_SelectedItem_String_TextViewInfo"
+        android:text="xxxxx"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
       <Spinner
-          android:id="@+id/spinner_SelectedItemPosition"
-          android:layout_width="match_parent"
-          android:layout_height="wrap_content"
-          android:entries="@array/weekdays" />
+        android:id="@+id/spinner_SelectedItem_String"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
     </LinearLayout>
   </LinearLayout>
 </ScrollView>

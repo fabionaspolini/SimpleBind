@@ -76,29 +76,38 @@ namespace SimpleBind.Examples.Droid
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f060004
+			public const int checkBox_Checked = 2131099652;
+			
 			// aapt resource value: 0x7f060003
-			public const int checkBox_Checked = 2131099651;
+			public const int checkBox_Checked_TextViewInfo = 2131099651;
 			
 			// aapt resource value: 0x7f060002
-			public const int checkBox_Checked_TextViewInfo = 2131099650;
+			public const int editText_Text = 2131099650;
 			
 			// aapt resource value: 0x7f060001
-			public const int editText_Text = 2131099649;
-			
-			// aapt resource value: 0x7f060000
-			public const int editText_Text_TextViewInfo = 2131099648;
-			
-			// aapt resource value: 0x7f060005
-			public const int spinner_SelectedItem = 2131099653;
-			
-			// aapt resource value: 0x7f060007
-			public const int spinner_SelectedItemPosition = 2131099655;
+			public const int editText_Text_TextViewInfo = 2131099649;
 			
 			// aapt resource value: 0x7f060006
-			public const int spinner_SelectedItemPosition_TextViewInfo = 2131099654;
+			public const int spinner_SelectedItemPosition = 2131099654;
 			
-			// aapt resource value: 0x7f060004
-			public const int spinner_SelectedItem_TextViewInfo = 2131099652;
+			// aapt resource value: 0x7f060005
+			public const int spinner_SelectedItemPosition_TextViewInfo = 2131099653;
+			
+			// aapt resource value: 0x7f060008
+			public const int spinner_SelectedItem_JavaString = 2131099656;
+			
+			// aapt resource value: 0x7f060007
+			public const int spinner_SelectedItem_JavaString_TextViewInfo = 2131099655;
+			
+			// aapt resource value: 0x7f06000a
+			public const int spinner_SelectedItem_String = 2131099658;
+			
+			// aapt resource value: 0x7f060009
+			public const int spinner_SelectedItem_String_TextViewInfo = 2131099657;
+			
+			// aapt resource value: 0x7f060000
+			public const int testeButton = 2131099648;
 			
 			static Id()
 			{
