@@ -17,8 +17,8 @@ namespace SimpleBind.Droid.Proxy
 
 		public object SelectedItem
         {
-            get { return Spinner.SelectedItem; }
-            set
+            get => Spinner.SelectedItem;
+		    set
             {
                 var lPosition = GetAdapterPositionFromItem(value);
                 Spinner.SetSelection(lPosition, Animated);
@@ -29,8 +29,8 @@ namespace SimpleBind.Droid.Proxy
 
         public int SelectedItemPosition
         {
-            get { return Spinner.SelectedItemPosition; }
-            set { Spinner.SetSelection(value, Animated); }
+            get => Spinner.SelectedItemPosition;
+            set => Spinner.SetSelection(value, Animated);
         }
 
         #endregion
@@ -89,6 +89,9 @@ namespace SimpleBind.Droid.Proxy
 
                 if (adapterItemValue is Java.Lang.Short)
                     return ((Java.Lang.Short) adapterItemValue).ShortValue() == Convert.ToInt16(dotNetItemValue);
+
+                if (adapterItemValue is Java.Lang.String)
+                    return ((Java.Lang.String) adapterItemValue).ToString() == Convert.ToString(dotNetItemValue);
 
                 return false;
             }

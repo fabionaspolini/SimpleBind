@@ -44,7 +44,7 @@ namespace SimpleBind.Examples.Droid.View
             try
             {
                 // EditText.Text
-                _container.CreateBind(_editText_Text)
+                /*_container.CreateBind(_editText_Text)
                     .From(m => m.EditText_TextChanged)
                     .To(v => v.Text)
                     .TwoWay();
@@ -92,7 +92,7 @@ namespace SimpleBind.Examples.Droid.View
                     .To(v => v.Text,
                         config => config.SetterDataConverter<string>(
                             (model, view, value) => TestModelConsts.Spinner_SelectedItem_JavaString_Prefix + value))
-                    .SourceToDestWay();
+                    .SourceToDestWay();*/
 
                 // Spinner.SelectedItem.String
                 _spinner_SelectedItem_String_Proxy = _spinner_SelectedItem_String.CreateBindProxy();
@@ -126,12 +126,12 @@ namespace SimpleBind.Examples.Droid.View
             _testeButton.Click += (o, args) =>
             {
                 //_spinner_SelectedItem_String_Proxy.SelectedItem = "Wednesday";
-                _model.Spinner_SelectedItem_JavaString = "Wednesday";
+                //_model.Spinner_SelectedItem_JavaString = "Wednesday";
                 _model.Spinner_SelectedItem_String = "Wednesday";
             };
 
             // Spinner.SelectedItem.String
-            var lSpinnerSelectedItemStringArray = new string[]
+            var lSpinnerSelectedItemStringArray = new[]
             {
                 "Sunday",
                 "Monday",
