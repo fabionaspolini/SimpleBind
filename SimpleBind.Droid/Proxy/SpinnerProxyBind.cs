@@ -72,7 +72,13 @@ namespace SimpleBind.Droid.Proxy
         {
             try
             {
-                if (adapterItemValue is Java.Lang.Byte)
+                if (dotNetItemValue == null && adapterItemValue == null)
+                    return true;
+
+                if (dotNetItemValue == null || adapterItemValue == null)
+                    return false;
+
+                /*if (adapterItemValue is Java.Lang.Byte)
                     return ((Java.Lang.Byte) adapterItemValue).ByteValue() == Convert.ToByte(dotNetItemValue);
 
                 if (adapterItemValue is Java.Lang.Double)
@@ -91,9 +97,10 @@ namespace SimpleBind.Droid.Proxy
                     return ((Java.Lang.Short) adapterItemValue).ShortValue() == Convert.ToInt16(dotNetItemValue);
 
                 if (adapterItemValue is Java.Lang.String)
-                    return ((Java.Lang.String) adapterItemValue).ToString() == Convert.ToString(dotNetItemValue);
+                    return ((Java.Lang.String) adapterItemValue).ToString() == Convert.ToString(dotNetItemValue);*/
 
-                return false;
+                var lValue = BindEngine.Platform.ToDotNetValue(adapterItemValue);
+                return lValue.Equals(dotNetItemValue);
             }
             catch
             {
