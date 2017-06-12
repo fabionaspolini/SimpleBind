@@ -106,6 +106,12 @@ namespace SimpleBind.Examples.Droid
 			// aapt resource value: 0x7f060007
 			public const int spinner_SelectedItem_JavaString_TextViewInfo = 2131099655;
 			
+			// aapt resource value: 0x7f06000e
+			public const int spinner_SelectedItem_Object = 2131099662;
+			
+			// aapt resource value: 0x7f06000d
+			public const int spinner_SelectedItem_Object_TextViewInfo = 2131099661;
+			
 			// aapt resource value: 0x7f06000a
 			public const int spinner_SelectedItem_String = 2131099658;
 			

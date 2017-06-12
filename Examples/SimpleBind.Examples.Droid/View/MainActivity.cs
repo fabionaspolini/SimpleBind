@@ -5,6 +5,7 @@ using SimpleBind.Droid;
 using SimpleBind.Droid.ComponentMap;
 using SimpleBind.Examples.Model.UITest;
 using System;
+using System.Linq;
 using Android.Widget;
 using SimpleBind.Droid.Proxy;
 
@@ -118,6 +119,19 @@ namespace SimpleBind.Examples.Droid.View
                             (model, view, value) => TestModelConsts.Spinner_SelectedItem_Enum_Prefix + value))
                     .SourceToDestWay();
 
+                // Spinner.SelectedItem.Object
+                _container.CreateBind(_spinner_SelectedItem_Object.CreateBindProxy())
+                    .From(m => m.Spinner_SelectedItem_Object)
+                    .To(v => v.SelectedItem)
+                    .TwoWay();
+
+                _container.CreateBind(_spinner_SelectedItem_Object_TextViewInfo)
+                    .From(m => m.Spinner_SelectedItem_Object)
+                    .To(v => v.Text,
+                        config => config.SetterDataConverter<TestSubModel>(
+                            (model, view, value) => TestModelConsts.Spinner_SelectedItem_Object_Prefix + value?.ToString()))
+                    .SourceToDestWay();
+
                 //
                 _container.Apply();
             }
@@ -137,6 +151,7 @@ namespace SimpleBind.Examples.Droid.View
                 _model.Spinner_SelectedItem_JavaString = "Wednesday";
                 _model.Spinner_SelectedItem_String = "Wednesday";
                 _model.Spinner_SelectedItem_Enum = TestEnum.ThirdValue;
+                _model.Spinner_SelectedItem_Object = TestSubModel.GetAll().Last();
             };
 
             #region Spinner.SelectedItem.String
@@ -170,6 +185,16 @@ namespace SimpleBind.Examples.Droid.View
             var lSpinnerSelectedItemEnumAdapter = new ArrayAdapter<TestEnum>(this, Android.Resource.Layout.SimpleSpinnerItem, lSpinnerSelectedItemEnumArray);
             lSpinnerSelectedItemEnumAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             _spinner_SelectedItem_Enum.Adapter = lSpinnerSelectedItemEnumAdapter;
+
+            #endregion
+
+            #region Spinner.SelectedItem.Object
+
+            var lSpinnerSelectedItemObjectArray = TestSubModel.GetAll();
+
+            var lSpinnerSelectedItemObjectAdapter = new ArrayAdapter<TestSubModel>(this, Android.Resource.Layout.SimpleSpinnerItem, lSpinnerSelectedItemObjectArray);
+            lSpinnerSelectedItemObjectAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            _spinner_SelectedItem_Object.Adapter = lSpinnerSelectedItemObjectAdapter;
 
             #endregion
         }

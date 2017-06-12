@@ -12,6 +12,7 @@ namespace SimpleBind.Examples.Model.UITest
         private string _spinner_SelectedItem_JavaString = "Saturday";
         private string _spinner_SelectedItem_String = "Saturday";
         private TestEnum _spinner_SelectedItem_Enum = TestEnum.SecondValue;
+        private TestSubModel _spinner_SelectedItem_Object;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -71,6 +72,16 @@ namespace SimpleBind.Examples.Model.UITest
             set
             {
                 _spinner_SelectedItem_Enum = value;
+                OnPropertyChanged();
+            }
+        }
+
+        public TestSubModel Spinner_SelectedItem_Object
+        {
+            get => _spinner_SelectedItem_Object;
+            set
+            {
+                _spinner_SelectedItem_Object = value;
                 OnPropertyChanged();
             }
         }

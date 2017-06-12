@@ -108,19 +108,35 @@
     </LinearLayout>
     <!-- Spinner.SelectedItem.Enum -->
     <LinearLayout
-      android:orientation="vertical"
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      android:layout_marginTop="50px">
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50px">
       <TextView
-        android:id="@+id/spinner_SelectedItem_Enum_TextViewInfo"
-        android:text="xxxxx"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+          android:id="@+id/spinner_SelectedItem_Enum_TextViewInfo"
+          android:text="xxxxx"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
       <Spinner
-        android:id="@+id/spinner_SelectedItem_Enum"
+          android:id="@+id/spinner_SelectedItem_Enum"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+    </LinearLayout>
+    <!-- Spinner.SelectedItem.Object -->
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="50px">
+      <TextView
+          android:id="@+id/spinner_SelectedItem_Object_TextViewInfo"
+          android:text="xxxxx"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+      <Spinner
+          android:id="@+id/spinner_SelectedItem_Object"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
     </LinearLayout>
   </LinearLayout>
 </ScrollView>
