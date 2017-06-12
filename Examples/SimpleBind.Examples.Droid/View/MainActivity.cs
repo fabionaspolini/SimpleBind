@@ -105,6 +105,19 @@ namespace SimpleBind.Examples.Droid.View
                             (model, view, value) => TestModelConsts.Spinner_SelectedItem_String_Prefix + value))
                     .SourceToDestWay();
 
+                // Spinner.SelectedItem.Enum
+                _container.CreateBind(_spinner_SelectedItem_Enum.CreateBindProxy())
+                    .From(m => m.Spinner_SelectedItem_Enum)
+                    .To(v => v.SelectedItem)
+                    .TwoWay();
+
+                _container.CreateBind(_spinner_SelectedItem_Enum_TextViewInfo)
+                    .From(m => m.Spinner_SelectedItem_Enum)
+                    .To(v => v.Text,
+                        config => config.SetterDataConverter<TestEnum>(
+                            (model, view, value) => TestModelConsts.Spinner_SelectedItem_Enum_Prefix + value))
+                    .SourceToDestWay();
+
                 //
                 _container.Apply();
             }
@@ -123,9 +136,11 @@ namespace SimpleBind.Examples.Droid.View
             {
                 _model.Spinner_SelectedItem_JavaString = "Wednesday";
                 _model.Spinner_SelectedItem_String = "Wednesday";
+                _model.Spinner_SelectedItem_Enum = TestEnum.ThirdValue;
             };
 
-            // Spinner.SelectedItem.String
+            #region Spinner.SelectedItem.String
+
             var lSpinnerSelectedItemStringArray = new[]
             {
                 "Sunday",
@@ -140,6 +155,23 @@ namespace SimpleBind.Examples.Droid.View
             var lSpinnerSelectedItemStringAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleSpinnerItem, lSpinnerSelectedItemStringArray);
             lSpinnerSelectedItemStringAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             _spinner_SelectedItem_String.Adapter = lSpinnerSelectedItemStringAdapter;
+
+            #endregion
+
+            #region Spinner.SelectedItem.Enum
+
+            var lSpinnerSelectedItemEnumArray = new[]
+            {
+                TestEnum.FirstValue,
+                TestEnum.SecondValue,
+                TestEnum.ThirdValue
+            };
+
+            var lSpinnerSelectedItemEnumAdapter = new ArrayAdapter<TestEnum>(this, Android.Resource.Layout.SimpleSpinnerItem, lSpinnerSelectedItemEnumArray);
+            lSpinnerSelectedItemEnumAdapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
+            _spinner_SelectedItem_Enum.Adapter = lSpinnerSelectedItemEnumAdapter;
+
+            #endregion
         }
     }
 }

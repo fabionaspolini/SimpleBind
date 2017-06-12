@@ -46,6 +46,13 @@ namespace SimpleBind.Examples.Droid.View
         [ComponentMap(Resource.Id.spinner_SelectedItem_String)]
         private Spinner _spinner_SelectedItem_String;
 
+        // Spinner.SelectedItem.Enum
+        [ComponentMap(Resource.Id.spinner_SelectedItem_Enum_TextViewInfo)]
+        private TextView _spinner_SelectedItem_Enum_TextViewInfo;
+
+        [ComponentMap(Resource.Id.spinner_SelectedItem_Enum)]
+        private Spinner _spinner_SelectedItem_Enum;
+
 #pragma warning restore 649
 
         #endregion
