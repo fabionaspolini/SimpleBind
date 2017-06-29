@@ -1,9 +1,27 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
   <PropertyGroup>
     <TargetFramework>netstandard1.0</TargetFramework>
     <AssemblyName>SimpleBind.Core</AssemblyName>
     <RootNamespace>SimpleBind.Core</RootNamespace>
+
+    <PackageId>SimpleBind.Core</PackageId>
+    <PackageVersion>1.0.0</PackageVersion>
+    <Authors>Fábio Naspolini</Authors>
+    <Description>Simple Bind Framework - Core</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes></PackageReleaseNotes>
+    <Copyright>Copyright 2017 (c) Fábio Naspolini. All rights reserved.</Copyright>
+    <PackageTags>Bind</PackageTags>
+    <PostBuildEvent></PostBuildEvent>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DocumentationFile></DocumentationFile>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DocumentationFile>bin\Release\netstandard1.0\.xml</DocumentationFile>
   </PropertyGroup>
 
 </Project>
