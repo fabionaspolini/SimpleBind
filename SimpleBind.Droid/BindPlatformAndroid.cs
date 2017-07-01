@@ -5,7 +5,6 @@ using SimpleBind.Droid.BindHandler;
 using SimpleBind.Droid.Proxy;
 using System;
 using System.Linq;
-using Java.Lang;
 
 namespace SimpleBind.Droid
 {
